@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./src/sass/index.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="icon" type="image/x-icon" href="./src/images/logo.png" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/index.js"></script>
+  </head>
+  <body>
+    <div class="mobile-ham-container">
+      <a href="#hero" class="mobile-logo">
+        <img src="# alt="" width="50" height="50" />
+      </a>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <div class="menu__overlay" id="menu__overlay"></div>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#hero">ГОЛОВНА</a></li>
+          <li><a class="menu__item" href="#materials">ПИЛОМАТЕРІАЛИ</a></li>
+          <li><a class="menu__item" href="#garant">ГАРАНТІЇ</a></li>
+          <li>
+            <a class="menu__item" href="#anketa">РОЗРАХУВАТИ ВАРТІСТЬ</a>
+          </li>
+          <li><a class="menu__item" href="#contacts">КОНТАКТИ</a></li>
+          <li>
+            <div class="social-container menu__item">
+              <p class="social-text">
+                Є питання? <br />
+                <span class="social-light-text"> Задайте онлайн</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <header class="page-header">
+      <ul class="header-list">
+        <li class="header-item">logo</li>
+        <li class="header-item"></li>
+        <li class="header-item"></li>
+        <li class="header-item"></li>
+        <li class="header-item"></li>
+      </ul>
+    </header> -->
+  </body>
+</html>
