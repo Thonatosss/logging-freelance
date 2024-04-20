@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./src/sass/index.scss" />
+    <link rel="stylesheet" href="./src/sass/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link rel="icon" type="image/x-icon" href="./src/images/logo.png" /> -->
@@ -17,7 +17,7 @@
   <body>
     <div class="mobile-ham-container">
       <a href="#hero" class="mobile-logo">
-        <img src="# alt="" width="50" height="50" />
+        <img src="./src/images/logo.png" width="70" height="70" />
       </a>
       <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
@@ -26,20 +26,13 @@
         </label>
         <div class="menu__overlay" id="menu__overlay"></div>
         <ul class="menu__box">
-          <li><a class="menu__item" href="#hero">ГОЛОВНА</a></li>
-          <li><a class="menu__item" href="#materials">ПИЛОМАТЕРІАЛИ</a></li>
-          <li><a class="menu__item" href="#garant">ГАРАНТІЇ</a></li>
+          <li><a class="menu__item" href="#hero">ПРОДУКЦІЯ</a></li>
           <li>
-            <a class="menu__item" href="#anketa">РОЗРАХУВАТИ ВАРТІСТЬ</a>
+            <a class="menu__item" href="#materials">ІДЕЇ ДЛЯ НАТХНЕННЯ</a>
           </li>
-          <li><a class="menu__item" href="#contacts">КОНТАКТИ</a></li>
+          <li><a class="menu__item" href="#garant">НОВИНИ</a></li>
           <li>
-            <div class="social-container menu__item">
-              <p class="social-text">
-                Є питання? <br />
-                <span class="social-light-text"> Задайте онлайн</span>
-              </p>
-            </div>
+            <a class="menu__item" href="#anketa">КОНТАКТИ</a>
           </li>
         </ul>
       </div>
@@ -53,5 +46,18 @@
         <li class="header-item"></li>
       </ul>
     </header> -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">Природна краса в кожному дотику</h1>
+        <p class="hero-text">Безліч Задоволення в Ідеальному Виборі!"</p>
+      </div>
+      <img src="./src/images/hero/hero.jpg" class="hero-img" alt="" />
+    </section>
+    <section class="products-section">
+      <div class="container">
+        <h2 class="products-title">Продукція</h2>
+        
+      </div>
+    </section>
   </body>
 </html>
