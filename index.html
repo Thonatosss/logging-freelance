@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./src/index.js"></script>
+    <script src="./src/index.js"></script>
   </head>
   <body>
     <div class="mobile-ham-container">
@@ -38,7 +38,7 @@
           <li>
             <a class="menu__item" href="#materials">ІДЕЇ ДЛЯ НАТХНЕННЯ</a>
           </li>
-          <li><a class="menu__item" href="#garant">НОВИНИ</a></li>
+          <!-- <li><a class="menu__item" href="#garant">НОВИНИ</a></li> -->
           <li>
             <a class="menu__item" href="#anketa">КОНТАКТИ</a>
           </li>
@@ -75,42 +75,131 @@
         <div class="glider-contain">
           <div class="glider">
             <div class="project-card">
-              <img src="./src/images/products/brus.png" alt="" />
+              <img class="products-img" src="./src/images/products/brus.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/fasad02.png" alt="" />
+              <img class="products-img" src="./src/images/products/fasad02.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img class="products-img" src="./src/images/products/fasad.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/brus02.png" alt="" />
+              <img class="products-img" src="./src/images/products/brus02.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/kripl.png" alt="" />
+              <img class="products-img" src="./src/images/products/kripl.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/fasad03.png" alt="" />
+              <img class="products-img" src="./src/images/products/fasad03.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/pannel.png" alt="" />
+              <img class="products-img" src="./src/images/products/pannel.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/terasa02.png" alt="" />
+              <img class="products-img" src="./src/images/products/terasa02.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/terasa.png" alt="" />
+              <img class="products-img" src="./src/images/products/terasa.png" alt="" />
             </div>
             <div class="project-card">
-              <img src="./src/images/products/kripl02.png" alt="" />
+              <img class="products-img" src="./src/images/products/kripl02.png" alt="" />
             </div>
           </div>
 
           <button aria-label="Previous" class="glider-prev">«</button>
           <button aria-label="Next" class="glider-next">»</button>
           <div role="tablist" class="dots"></div>
-        </div>
+          <!-- <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+             <img src="./src/images/products/brus.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/fasad02.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img class="products-img" src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/brus02.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/kripl.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/fasad03.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/pannel.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/terasa02.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/terasa.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img class="products-img" src="./src/images/products/kripl02.png" alt=""/>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div> -->
       </div>
+      <div class="form-container" id="anketa">
+                <div class="steps-container">
+                  <div id="stepCounter">Крок 1</div>
+                  <!-- Крок 1 -->
+                  <div class="form-step step1 active">
+                    <h2 class="form-title">Площа об'єкту</h2>
+                      <div class="range-info-container" style="font-size: 16px; font-weight: 600;"> 
+                          Площа об'єкту:
+                          <span id="areaValue">0</span>
+                          м²
+                      </div>
+                      <input
+                        class="range-input"
+                        type="number"
+                        id="areaRange"
+                        
+                        oninput="updateAreaValue(this.value)"
+                      />
+                    <button
+                      class="btn form-btn"
+                      onclick="nextStep(2)"
+                      type="button"
+                    >
+                      <a class="next-link" href="#anketa" style="color: white">Далі</a>
+                    </button>
+                  </div>
+                  <!-- Крок 2 -->
+                  <div class="steps-container">
+                    <div class="form-step step2">
+                      <h2 class="form-title">Введіть ім'я та номер телефону</h2>
+                      <form
+                        id="submitForm"
+                        onsubmit="event.preventDefault(); submitForm();"
+                      >
+                        <label for="name">Ім'я:</label>
+                        <input type="text" id="name" name="name" required />
+                        <label for="phone">Номер телефону:</label>
+                        <input type="tel" id="phone" name="phone" required />
+                        <div class="buttons-container">
+                          <button
+                            class="btn form-btn"
+                            onclick="prevStep(1)"
+                            type="button"
+                          >
+                            Назад
+                          </button>
+                          <button class="btn form-btn" type="submit">
+                            Відправити
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
     </section>
     <section class="ideas-section">
       <div class="container">
@@ -125,36 +214,57 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj2.jpg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj3.jpeg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj4.jpeg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj5.jpeg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj6.jpg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj7.jpg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj8.jpg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj9.jpg" alt="" />
             </div>
             <div class="swiper-slide">
-              <img src="./src/images/products/fasad.png" alt="" />
+              <img src="./src/images/products/obj10.png" alt="" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
+    </section>
+    <section class="footer-section">
+      <h2 class="footer-title">
+        Наші контакти
+      </h2>
+      <p class="footer-text">
+        Маєте питання? <br>
+        Зв'яжіться з нашою командою для отримання додаткової інформації!
+      </p>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a href="#" class="social-link">
+            <img src="./src/images/socials/facebook.png" alt="" width="30">
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="#" class="social-link">
+            <img src="./src/images/socials/instagram.png" alt="" width="30">
+          </a>
+        </li>
+      </ul>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
