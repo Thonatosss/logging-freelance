@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./src/sass/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- <link rel="icon" type="image/x-icon" href="./src/images/logo.png" /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
@@ -56,8 +64,161 @@
     <section class="products-section">
       <div class="container">
         <h2 class="products-title">Продукція</h2>
-        
+        <p class="products-text">
+          У нашому середовищі, де асфальт здається безкінечним, ми шукаємо
+          способи зв'язку з природою. Термомодифікована дошка від "ФайнаWood"
+          пропонує цей зв'язок, переносячи красу природи прямо до нашого життя.
+          Використовуючи унікальну технологію термічної модифікації та уважно
+          відібрану сертифіковану деревину з екологічно чистих лісів, ми
+          створюємо надихаючі продукти, які стануть джерелом натхнення для вас.
+        </p>
+        <div class="glider-contain">
+          <div class="glider">
+            <div class="project-card">
+              <img src="./src/images/products/brus.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/fasad02.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/brus02.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/kripl.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/fasad03.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/pannel.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/terasa02.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/terasa.png" alt="" />
+            </div>
+            <div class="project-card">
+              <img src="./src/images/products/kripl02.png" alt="" />
+            </div>
+          </div>
+
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
       </div>
     </section>
+    <section class="ideas-section">
+      <div class="container">
+        <h2 class="ideas-title">Ідеї для натхнення</h2>
+        <p class="ideas-text">
+          Термодошка від Thermory та Lunawood створює неперевершений комфорт та
+          естетичне задоволення від перебування під відкритим небом. Кожна дошка
+          відрізняється природною красою і високою функціональністю завдяки
+          професійній обробці, що представляє ідеальне поєднання мистецтва та
+          технології.
+        </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/fasad.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        scrollLock: true,
+
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next',
+        },
+        responsive: [
+          {
+            breakpoint: 521,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

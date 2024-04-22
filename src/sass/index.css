@@ -156,4 +156,65 @@ body {
 
 .hero-img {
   width: 100%;
+}
+
+.project-card {
+  padding: 10px;
+  background-color: #e8ecec;
+  border-radius: 10px;
+}
+
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 220px;
+}
+
+.glider-dot.active {
+  background: #173647 !important;
+}
+
+.glider-track {
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .glider-track {
+    gap: 30px;
+  }
+  .project-description {
+    font-size: 18px;
+  }
+  .done-projects-title {
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+  .done-projects-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 40px;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
