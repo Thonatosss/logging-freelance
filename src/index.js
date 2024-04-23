@@ -1,3 +1,4 @@
+
 let currentStep = 1;
 
 function nextStep(step) {
@@ -33,32 +34,32 @@ function submitForm() {
     const formData = {
         name: document.getElementById("name").value,
         phone: document.getElementById("phone").value,
-        objectType: document.querySelector(
-            'input[name="objectType"]:checked'
-        ).value,
+        // objectType: document.querySelector(
+        //     'input[name="objectType"]:checked'
+        // ).value,
         area: document.getElementById("areaRange").value,
-        systems: Array.from(
-            document.querySelectorAll('input[name="systems"]:checked')
-        ).map((input) => input.value),
-        workTypes: Array.from(
-            document.querySelectorAll(
-                'input[name="workTypes"]:checked'
-            )
-        ).map((input) => input.value),
+        // systems: Array.from(
+        //     document.querySelectorAll('input[name="systems"]:checked')
+        // ).map((input) => input.value),
+        // workTypes: Array.from(
+        //     document.querySelectorAll(
+        //         'input[name="workTypes"]:checked'
+        //     )
+        // ).map((input) => input.value),
     };
     // Отримати токен та чат_id зі свого бота в телеграмі
     const TOKEN =
-        "6956288167:AAHuR7oOShLoxF1MEcaLUOj_gk_TouvRYIo";
-    const CHAT_ID = "-1001533686542";
+        "6992152290:AAHL0yocpjwg2fg5AwyIGTY49Qa8D_678w4";
+    const CHAT_ID = "-1002080691876";
     const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     // Створити текстовий повідомлення з отриманими даними
     let message = `Заявка з сайту!\n\n`;
     message += `Ім'я: ${formData.name}\n`;
     message += `Номер телефону: ${formData.phone}\n`;
-    message += `Тип об'єкту: ${formData.objectType}\n`;
-    message += `Площа об'єкту: ${formData.area} м²\n`;
-    message += `Типи систем: ${formData.systems.join(", ")}\n`;
-    message += `Типи робіт: ${formData.workTypes.join(", ")}\n`;
+    // message += `Тип об'єкту: ${formData.objectType}\n`;
+    message += `Об'єм матеріалу: ${formData.area} м²\n`;
+    // message += `Типи систем: ${formData.systems.join(", ")}\n`;
+    // message += `Типи робіт: ${formData.workTypes.join(", ")}\n`;
     // Відправити повідомлення в телеграм
     fetch(URL, {
         method: "POST",
@@ -72,7 +73,7 @@ function submitForm() {
         }),
     })
         .then((response) => {
-            window.location.href = "thanks.html";
+            window.location.href = "index.html";
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
@@ -101,7 +102,7 @@ function submitForm() {
 }
 function resetForm() {
     // Очистити дані форми або виконати інші дії для скидання форми
-    document.getElementById("areaRange").value = 0;
+    // document.getElementById("areaRange").value = 0;
     document
         .querySelectorAll('input[name="objectType"]')
         .forEach((input) => (input.checked = false));
@@ -132,6 +133,24 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (currentStep === 3 || currentStep === 4) {
                 // Якщо це третій або четвертий крок, дозвольте обирати декілька фото
                 image.classList.toggle("selected");
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Отримання посилань меню
+    const menuLinks = document.querySelectorAll(".menu__item");
+
+    // Отримання чекбоксу гамбургерного меню
+    const menuToggle = document.getElementById("menu__toggle");
+
+    // Додавання обробника подій для кожного посилання меню
+    menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            // Закриття меню, якщо воно відкрите
+            if (menuToggle.checked) {
+                menuToggle.checked = false;
             }
         });
     });

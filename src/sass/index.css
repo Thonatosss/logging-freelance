@@ -147,15 +147,47 @@ body.menu-open {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  margin: 0;
 }
 
 .hero-section {
   padding-top: 90px;
+  background-image: url("/src/images/products/obj3.jpeg");
+  background-size: cover;
+  padding-bottom: 100px;
+  width: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .hero-img {
   width: 100%;
+}
+
+.hero-title {
+  text-align: left;
+  color: white;
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.hero-text {
+  color: white;
+  font-size: 26px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.products-title {
+  font-size: 34px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.products-text {
+  font-size: 19px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .project-card {
@@ -209,6 +241,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .swiper-slide img {
@@ -258,9 +291,9 @@ body {
   margin-top: 10px;
   width: 100px;
   cursor: pointer;
-  background-color: #173647;
-  color: #fff;
-  border: none;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
   border-radius: 4px;
   margin-right: 10px;
   transition: background-color 0.3s ease-in-out;
@@ -432,7 +465,7 @@ input[type=checkbox] {
 }
 
 .form-container button {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 #submitForm {
@@ -496,6 +529,78 @@ input[type=checkbox] {
   flex-direction: column;
 }
 
+.glider-next {
+  right: -13px !important;
+  font-size: 35px !important;
+}
+
+.glider-prev {
+  left: -13px !important;
+  font-size: 35px !important;
+}
+
 .socials-list {
   list-style: none;
+}
+
+.form-section {
+  padding-top: 30px;
+}
+
+.form-section-title {
+  font-size: 23px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ideas-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ideas-title {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.ideas-text {
+  font-size: 19px;
+}
+
+.footer-section {
+  padding-top: 20px;
+}
+
+.footer-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.footer-text {
+  font-size: 22px;
+  text-align: center;
+}
+
+.center-socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid black;
+  margin-bottom: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.social-text {
+  font-size: 18px;
 }/*# sourceMappingURL=index.css.map */
