@@ -5,12 +5,13 @@
   "homepage": "https://Thonatosss.github.io/logging-freelance",
   "scripts": {
     "start": "parcel *.html",
-    "build": "parcel *.html --public-url /logging-freelance/"
+    "build": "parcel build *.html --public-url /logging-freelance/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
+
   "dependencies": {
     "modern-normalize": "^1.1.0"
   },
