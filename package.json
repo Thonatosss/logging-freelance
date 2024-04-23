@@ -5,7 +5,7 @@
   "homepage": "https://Thonatosss.github.io/logging-freelance",
   "scripts": {
     "start": "parcel *.html",
-    "build": "parcel build src/*.html --public-url /logging-freelance/"
+    "build": "parcel *.html --public-url /logging-freelance/"
   },
   "repository": {
     "type": "git",
