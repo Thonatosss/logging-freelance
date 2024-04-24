@@ -51,12 +51,12 @@ body.menu-open {
 }
 
 .menu__btn > span::before {
-  content: "";
+  content: '';
   top: -12px;
 }
 
 .menu__btn > span::after {
-  content: "";
+  content: '';
   top: 12px;
 }
 
@@ -146,17 +146,18 @@ body.menu-open {
 }
 
 body {
-  font-family: "Sofia Sans Condensed", sans-serif;
+  font-family: 'Sofia Sans Condensed', sans-serif;
   margin: 0;
 }
 
 .hero-section {
   padding-top: 90px;
-  background-image: url("../../images/heroImage.jpg");
+  background-image: url('../../src/images/hero/heroImage.jpg');
   background-size: cover;
   padding-bottom: 100px;
   width: 100%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .hero-img {
@@ -240,7 +241,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .swiper-slide img {
@@ -248,7 +250,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -331,8 +333,8 @@ label {
   flex-direction: column;
 }
 
-input[type=radio],
-input[type=checkbox] {
+input[type='radio'],
+input[type='checkbox'] {
   margin-right: 5px;
   visibility: hidden;
 }
@@ -464,7 +466,7 @@ input[type=checkbox] {
 }
 
 .form-container button {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
 #submitForm {
@@ -483,9 +485,10 @@ input[type=checkbox] {
   border-radius: 2px;
   box-sizing: border-box;
   border: 0.5px solid black;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding-left: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #name,
@@ -574,7 +577,8 @@ input[type=checkbox] {
   text-align: center;
   font-size: 36px;
   font-weight: 400;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .footer-text {
@@ -589,7 +593,8 @@ input[type=checkbox] {
   align-items: center;
   outline: 1px solid black;
   margin-bottom: 10px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .socials-list {
@@ -602,4 +607,4 @@ input[type=checkbox] {
 
 .social-text {
   font-size: 18px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
