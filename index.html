@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>ФайнаWood - ТЕРМОДЕРЕВИНА Київ</title>
     <link rel="stylesheet" href="./src/sass/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +19,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- <link rel="icon" type="image/x-icon" href="./src/images/logo.png" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./src/images/favikon.png" />
     <script src="./src/index.js"></script>
   </head>
   <body>
     <div class="mobile-ham-container">
       <a href="#hero" class="mobile-logo">
-        <img src="./src/images/logo.png" width="70" height="70" />
+        <img src="./src/images/logo.png" class="mobile-logo" />
       </a>
       <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
@@ -53,23 +54,64 @@
         </ul>
       </div>
     </div>
-    <!-- <header class="page-header">
-      <ul class="header-list">
-        <li class="header-item">logo</li>
-        <li class="header-item"></li>
-        <li class="header-item"></li>
-        <li class="header-item"></li>
-        <li class="header-item"></li>
-      </ul>
-    </header> -->
-    <section class="hero-section" id="hero">
+    <header class="page-header" >
+      <div class="container">
+        <ul class="header-first-list">
+          <li class="first-list-item">
+           <a href="#hero">
+             <img
+              src="./src/images/logo.png"
+              width="80px"
+              height="80px"
+              alt=""
+              class="header-logo"
+            />
+          </li>
+           </a>
+          <li class="first-list-item">
+            <div class="header-mess">
+              <p class="header-mess-text">
+                <span class="ama">Є питання?</span> <br />
+                Задайте його нам!
+              </p>
+              <a href="mes-link" class="mes-link"><img src="./src/images/socials/facebook.png" alt="" width="40" height="40" /></a>
+              <a href="mes-link" class="mes-link"><img src="./src/images/socials/instagram.png" alt="" width="40" height="40" /></a>
+            </div>
+          </li>
+          <li class="first-list-item">
+            <div class="header-contacts">
+              <p class="quest-schedule">Пн-Пт 9:00-18:00</p>
+              <a href="tel:+380936376163" class="schedule-phone" style="color: #414140"
+                >+38(093)637-61-63</a
+              >
+              <!-- href="tel:+380936376163">+38(093)637-61-63 -->
+            </div>
+          </li>
+        </ul>
+        <ul class="header-second-list">
+          <li class="second-list-item">
+            <a href="#hero" class="header-nav">ПРОДУКЦІЯ</a>
+          </li>
+          <li class="second-list-item">
+            <a href="#form" class="header-nav">ЗАЛИШИТИ ЗАЯВКУ</a>
+          </li>
+          <li class="second-list-item">
+            <a href="#ideas" class="header-nav">ІДЕЇ ДЛЯ НАТХНЕННЯ</a>
+          </li>
+          <li class="second-list-item">
+            <a href="#contacts" class="header-nav">НАШІ КОНТАКТИ</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="hero-section"  id="hero">
       <div class="container">
         <h1 class="hero-title">Природна краса в кожному дотику</h1>
-        <p class="hero-text">Безліч Задоволення в Ідеальному Виборі!"</p>
+        <p class="hero-text">Безліч Задоволення в Ідеальному Виборі!</p>
       </div>
       <!-- <img src="./src/images/hero/hero.jpg" class="hero-img" alt="" /> -->
     </section>
-    <section class="products-section" id="products">
+    <section class="products-section" id="products" data-aos="zoom-in">
       <div class="container">
         <h2 class="products-title">Продукція</h2>
         <p class="products-text">
@@ -154,7 +196,7 @@
         </div> -->
       </div>
     </section>
-    <section class="form-section" id="form">
+    <section class="form-section" id="form" data-aos="zoom-in">
       <div class="container">
         <h2 class="form-section-title">
           Пройдіть анкету за 1 хвилину!
@@ -165,7 +207,7 @@
                   <!-- Крок 1 -->
                   <div class="form-step step1 active">
                     <h2 class="form-title">Введіть об'єм матеріалу</h2>
-                      <div class="range-info-container" style="font-size: 16px; font-weight: 600;"> 
+                      <div class="range-info-container"> 
                           Об'єм матеріалу:
                           <span id="areaValue">0</span>
                           м²
@@ -216,7 +258,7 @@
               </div>
       </div>
     </section>
-    <section class="ideas-section" id="ideas">
+    <section class="ideas-section" id="ideas" data-aos="fade-up">
       <div class="container">
         <h2 class="ideas-title">Ідеї для натхнення</h2>
         <p class="ideas-text">
@@ -255,12 +297,15 @@
             <div class="swiper-slide">
               <img src="./src/images/products/obj10.png" alt="" />
             </div>
+            <div class="swiper-slide">
+              <img src="./src/images/products/obj3.jpeg" alt="" />
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
-    <section class="footer-section" id="contacts">
+    <section class="footer-section" id="contacts" data-aos="fade-up">
       <div class="container">
         <h2 class="footer-title">Наші контакти</h2>
         <p class="footer-text">
@@ -278,7 +323,7 @@
               href="https://www.facebook.com/thermotreekyiv"
               class="social-link"
             >
-              <img src="./src/images/socials/facebook.png" alt="" width="40" />
+              <img src="./src/images/socials/facebook.png" alt="" width="40" class="social-image" />
             </a>
           </li>
           <li class="socials-item">
@@ -286,7 +331,7 @@
               href="https://www.instagram.com/thermotreekyiv/"
               class="social-link"
             >
-              <img src="./src/images/socials/instagram.png" alt="" width="40" />
+              <img src="./src/images/socials/instagram.png" alt="" width="40" class="social-image" />
             </a>
           </li>
         </ul>
@@ -371,6 +416,10 @@
           },
         },
       });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
     <script src="./src/js/ham-menu.js"></script>
     <script src="./src/js/scroll.js"></script>
