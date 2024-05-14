@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" integrity="sha512-6sOT9zKSKq1CYgNMqtcY84tFPDnG1yX5mxwdGQiAVpAomVr2kUKJ//pFeU/KfaZDVCOru5iFOVswpT4RWWF2dQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
@@ -22,6 +23,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./src/images/favikon.png" />
     <script src="./src/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js" integrity="sha512-tvpLVnZrWnnNzV2921XEMx4xkFTUF8xg3s+Mi6cvC/R7A6X1FkpBUXPJFa3Xh5uD9BvOZ2tHeYq/5ZqrweW86Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <div class="mobile-ham-container">
@@ -268,7 +272,8 @@
           професійній обробці, що представляє ідеальне поєднання мистецтва та
           технології.
         </p>
-        <div class="swiper mySwiper">
+        <!-- <div class="swiper mySwiper">
+
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./src/images/products/obj2.jpg" alt="" />
@@ -302,7 +307,32 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
-        </div>
+        </div> -->
+
+              <!-- ### start of the gallery definition ### -->
+               <div id="nanogallery2"
+              
+                  data-nanogallery2 = '{
+                        "thumbnailHeight":  350,
+                        "thumbnailWidth":   350,
+                        "itemsBaseURL":     "./src/images/products/",
+                        "thumbnailBorderHorizontal": 0,
+                        "thumbnailBorderVertical": 0
+                        
+                      }' >
+                      
+                  <!-- gallery content -->
+                  <a href = "obj2.jpg"   data-ngThumb = "obj2.jpg" ></a>
+                  <a href = "obj3.jpeg"   data-ngThumb = "obj3.jpeg" ></a>
+                  <a href = "obj4.jpeg"   data-ngThumb = "obj4.jpeg" ></a>
+                  <a href = "obj5.jpeg"   data-ngThumb = "obj5.jpeg" ></a>
+                  <a href = "obj6.jpg"   data-ngThumb = "obj6.jpg" ></a>
+                  <a href = "obj7.jpg"   data-ngThumb = "obj7.jpg" ></a>
+                  <a href = "obj8.jpg"   data-ngThumb = "obj8.jpg" ></a>
+                  <a href = "obj9.jpg"   data-ngThumb = "obj9.jpg" ></a>
+                  <!-- <a href = "obj10.jpg"   data-ngThumb = "obj10.jpg" ></a> -->
+              </div>
+              <!-- ### end of the gallery definition ### -->
       </div>
       
     </section>
@@ -418,6 +448,7 @@
         },
       });
     </script>
+     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
