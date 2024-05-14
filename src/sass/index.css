@@ -183,13 +183,14 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  gap: 30px;
 }
 .header-contacts {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-right: 250px;
+  /* margin-right: 250px; */
 }
 .header-mess {
   display: flex;
@@ -205,6 +206,7 @@ body {
   align-items: center;
   /* margin-top: 15px; */
   list-style: none;
+  /* gap: 50px; */
 }
 .header-nav {
   color: black;
@@ -212,6 +214,11 @@ body {
   font-size: 18px;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
+}
+.center-first-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-nav:hover {
@@ -317,111 +324,84 @@ body {
   text-align: left;
   line-height: 1.5;
 }
-
-.project-card {
-  padding: 10px;
-  background-color: #e8ecec;
-  border-radius: 10px;
+.ua-photo {
+  width: 100%;
 }
 
-.project-card {
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.country-text {
+  font-size: 19px;
+  text-align: center;
+}
+.to-center-country {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 250px;
 }
-
-.glider-dot.active {
-  background: black !important;
+.country-button {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  padding: 10px 10px;
+  font-size: 13px;
+  margin-top: 10px;
+  width: 80px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-
-.glider-track {
-  gap: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .glider-track {
-    gap: 30px;
-  }
-  .project-description {
-    font-size: 18px;
-  }
-  .done-projects-title {
-    font-size: 32px;
-    margin-bottom: 80px;
-  }
-  .done-projects-img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 40px;
-  }
-  .products-title {
-    font-size: 38px;
-  }
-  .products-section {
-    padding-top: 50px;
-  }
-  .products-text {
-    font-size: 21px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .products-title {
-    font-size: 62px;
-  }
-  .products-text {
-    font-size: 26px;
-  }
-  .products-img {
-    width: 230px !important;
-    height: 180px !important;
-  }
-  .project-card {
-    width: 350px !important;
-  }
-  .glider-contain {
-    margin-top: 50px !important;
-  }
-}
-/* IDEAS */
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+.country-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+.ua-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 0;
+  display: none;
+}
+.ua-item {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
   border-radius: 5px;
 }
-@media screen and (min-width: 768px) {
-  .swiper-slide {
-    width: 30% !important;
-  }
+.ua-text {
+  text-align: center;
 }
+.info-list {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
+}
+/* IDEAS */
+
 .products-img {
   width: 140px;
   height: 120px;
 }
 
-.swiper-pagination-bullet-active {
-  background: black !important;
-}
 /* FORM SECTION */
 .form-container {
   /* width: 900px; */
