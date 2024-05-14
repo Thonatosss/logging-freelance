@@ -205,61 +205,60 @@
         <h2 class="form-section-title">
           Пройдіть анкету за 1 хвилину!
         </h2>
-        <div class="form-container" id="anketa">
-                <div class="steps-container">
-                  <div id="stepCounter">Крок 1</div>
-                  <!-- Крок 1 -->
-                  <div class="form-step step1 active">
-                    <h2 class="form-title">Введіть об'єм матеріалу</h2>
-                      <div class="range-info-container"> 
-                          Об'єм матеріалу:
-                          <span id="areaValue">0</span>
-                          м²
-                      </div>
-                      <input
-                        class="range-input"
-                        type="number"
-                        id="areaRange"
-                        
-                        oninput="updateAreaValue(this.value)"
-                      />
-                    <button
-                      class="btn form-btn"
-                      onclick="nextStep(2)"
-                      type="button"
-                    >
-                      <a class="next-link" href="#anketa" style="color: white">Далі</a>
-                    </button>
-                  </div>
-                  <!-- Крок 2 -->
-                  <div class="steps-container">
-                    <div class="form-step step2">
-                      <h2 class="form-title">Введіть ім'я та номер телефону</h2>
-                      <form
-                        id="submitForm"
-                        onsubmit="event.preventDefault(); submitForm();"
-                      >
-                        <label for="name">Ім'я:</label>
-                        <input type="text" id="name" name="name" required />
-                        <label for="phone">Номер телефону:</label>
-                        <input type="tel" id="phone" name="phone" required />
-                        <div class="buttons-container">
-                          <button
-                            class="btn form-btn"
-                            onclick="prevStep(1)"
-                            type="button"
-                          >
-                            Назад
-                          </button>
-                          <button class="btn form-btn" type="submit">
-                            Відправити
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+       <div class="form-container" id="anketa">
+    <div class="steps-container">
+        <div id="stepCounter">Крок 1</div>
+        <!-- Крок 1 -->
+        <div class="form-step step1 active">
+            <h2 class="form-title">З якого дерева матеріал?</h2>
+            <form id="woodTypeForm">
+                <select id="woodType" name="woodType">
+                    <option value="Ясінь" class="sos">Ясінь</option>
+                    <option value="Сосна">Сосна</option>
+                </select>
+                <button class="btn form-btn" onclick="nextStep(2)" type="button">Далі</button>
+            </form>
+        </div>
+        <!-- Крок 2 -->
+        <div class="form-step step2">
+            <h2 class="form-title">Введіть об'єм матеріалу</h2>
+            <div class="range-info-container"> Об'єм матеріалу: <span id="areaValue">0</span> м² </div>
+            <input class="range-input" type="number" id="areaRange" oninput="updateAreaValue(this.value)" />
+            <div class="buttons-container">
+              <button class="btn form-btn" onclick="nextStep(3)" type="button">Далі</button>
+              <button class="btn form-btn" onclick="prevStep(1)" type="button">Назад</button>
+            </div>
+        </div>
+        <!-- Крок 3 -->
+        <div class="form-step step3">
+            <h2 class="form-title">Введіть ім'я та номер телефону</h2>
+            <form id="submitForm" onsubmit="event.preventDefault(); submitForm();">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required />
+                <div class="buttons-container">
+                  <button class="btn form-btn" type="submit">Відправити</button>
+                    <button class="btn form-btn" onclick="prevStep(2)" type="button">Назад</button>
                 </div>
-              </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </section>
+    <section class="useful-section">
+      <div class="container">
+        <h2 class="useful-title">Корисна інформація</h2>
+        <p class="useful-text">При виборі термодошки для вашого проекту важливо враховувати різноманітні фактори, щоб забезпечити оптимальний результат. Ось деякі поради, які допоможуть вам зробити правильний вибір:</p>
+        <ul class="useful-list">
+          <li class="useful-item">Тип деревини: Різні види деревини мають різні властивості та вигляд після термічної модифікації. Оберіть вид деревини, який відповідає вашим естетичним та функціональним вимогам.</li>
+          <li class="useful-item">Розмір та профіль дошки: Вибір розміру та профілю дошки визначить вигляд та характеристики вашої тераси чи фасаду. Порівняйте різні варіанти та оберіть той, що найбільше відповідає вашому проекту.</li>
+          <li class="useful-item">Стійкість до погодних умов: Врахуйте кліматичні умови вашого регіону. Оберіть термодошку, яка витримує екстремальні температури, вологість та інші атмосферні впливи.</li>
+          <li class="useful-item">Довговічність та обслуговування: Перевірте характеристики термодошки щодо довговічності та потреби у обслуговуванні. Оберіть продукт, який не потребує постійного утримання та забезпечує тривалий термін служби.</li>
+          <li class="useful-item">Сертифікація та екологічність: Переконайтеся, що обраний вами виробник використовує сертифіковану деревину з екологічно чистих джерел. Вибір екологічно чистих матеріалів допоможе зменшити вплив на навколишнє середовище.</li>
+        </ul>
       </div>
     </section>
     <section class="ideas-section" id="ideas" data-aos="fade-up"  data-aos-duration="800">

@@ -27,16 +27,14 @@ function updateAreaValue(value) {
 function updateStepCounter() {
     document.getElementById(
         "stepCounter"
-    ).innerText = `Крок ${currentStep}/2`;
+    ).innerText = `Крок ${currentStep}/3`;
 }
 function submitForm() {
     // Отримайте значення з форми і обробіть їх за потреби
     const formData = {
         name: document.getElementById("name").value,
         phone: document.getElementById("phone").value,
-        // objectType: document.querySelector(
-        //     'input[name="objectType"]:checked'
-        // ).value,
+        objectType: document.getElementById("woodType").value,
         area: document.getElementById("areaRange").value,
         // systems: Array.from(
         //     document.querySelectorAll('input[name="systems"]:checked')
@@ -56,7 +54,7 @@ function submitForm() {
     let message = `Заявка з сайту!\n\n`;
     message += `Ім'я: ${formData.name}\n`;
     message += `Номер телефону: ${formData.phone}\n`;
-    // message += `Тип об'єкту: ${formData.objectType}\n`;
+    message += `Матеріал: ${formData.objectType}\n`;
     message += `Об'єм матеріалу: ${formData.area} м²\n`;
     // message += `Типи систем: ${formData.systems.join(", ")}\n`;
     // message += `Типи робіт: ${formData.workTypes.join(", ")}\n`;
