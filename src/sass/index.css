@@ -318,14 +318,21 @@ body {
   text-align: left;
   font-weight: 400;
 }
-
+.products-page {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ua-link {
+  color: white;
+  text-decoration: none;
+}
 .products-text {
   font-size: 19px;
   text-align: left;
   line-height: 1.5;
-}
-.ua-photo {
-  width: 100%;
 }
 
 .photo-container {
@@ -369,32 +376,105 @@ body {
   list-style: none;
   padding-left: 0;
 }
-.ua-list {
+
+.info-list {
   list-style: none;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-10%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.ua-photo {
+  width: 80%;
+}
+.center-photo {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.ua-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   padding-left: 0;
-  display: none;
+  justify-content: center;
 }
+
 .ua-item {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
 }
 .ua-text {
   text-align: center;
-}
-.info-list {
-  list-style: none;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
+  .ua-item {
+    flex: 1 1 calc(50% - 40px);
+  }
 }
+
 @media screen and (min-width: 1200px) {
+  .ua-text{
+    font-size: 24px;
+  }
+  .info-item{
+    font-size: 18px;
+  }
+  .ua-item {
+    flex: 1 1 calc(33.333% - 40px);
+  }
+  .ua-list {
+    max-width: calc(3 * 430px + 2 * 40px);
+  }
 }
+
 /* IDEAS */
 
 .products-img {
