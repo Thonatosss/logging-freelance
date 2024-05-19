@@ -447,7 +447,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 300px;
+  width: 230px;
 }
 .ua-text {
   text-align: center;
@@ -457,14 +457,15 @@ body {
 @media screen and (min-width: 768px) {
   .ua-item {
     flex: 1 1 calc(50% - 40px);
+    max-width: 300px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .ua-text{
+  .ua-text {
     font-size: 24px;
   }
-  .info-item{
+  .info-item {
     font-size: 18px;
   }
   .ua-item {
