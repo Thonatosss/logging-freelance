@@ -449,6 +449,10 @@ body {
   width: 100%;
   width: 230px;
 }
+.info-list {
+  color: black;
+  text-decoration: none;
+}
 .ua-text {
   text-align: center;
   font-size: 20px;
